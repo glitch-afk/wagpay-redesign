@@ -1,21 +1,14 @@
-import React from 'react';
+import First from './first';
+import Second from './second';
 
 const index = () => {
   return (
-    <section className="w-full text-center dark:bg-secondaryDark">
-      <h1>Select Token</h1>
-      <div className="grid grid-cols-3">
-        <div className="flex w-full flex-col items-center justify-center">
-          Source Chain
-          <input type="text" placeholder="Search for Chains" />
-        </div>
-        <div className="flex w-full items-center justify-center">2</div>
-        <div className="flex w-full flex-col items-center justify-center">
-          Destination Chain
-          <input type="text" placeholder="Search for Chains" />
-        </div>
-      </div>
-    </section>
+    <div className="flex flex-col space-y-6">
+      {/* section 1 */}
+      <First />
+      {/* section 2 */}
+      <Second />
+    </div>
   );
 };
 
