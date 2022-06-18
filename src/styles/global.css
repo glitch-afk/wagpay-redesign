@@ -1,21 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
 @tailwind base;
-
-a {
-  @apply text-blue-700;
-}
-
-a:hover {
-  @apply border-b-2 border-blue-700;
-}
-
 @tailwind components;
-
 @tailwind utilities;
 
-.content p {
-  @apply my-6;
+body {
+  font-family: 'Poppins', sans-serif;
 }
 
-.content ul {
-  @apply my-6;
+.wagpay-gradient {
+  background: linear-gradient(272.44deg, #FFFFFF 79.19%, rgba(255, 255, 255, 0) 121.04%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }

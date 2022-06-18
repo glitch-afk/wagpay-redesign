@@ -1,6 +1,6 @@
 export const AppConfig = {
-  site_name: 'NFT Marketplace',
-  title: 'NFT Marketplace',
-  description: 'NFT Marketplace',
+  site_name: 'Wagpay',
+  title: 'Wagpay',
+  description: 'Wagpay - Cross Chain Swapping',
   locale: 'en',
 };
