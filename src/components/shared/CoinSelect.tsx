@@ -1,10 +1,29 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 import React, { useState } from 'react';
 
+const coins = [
+  {
+    id: 1,
+    name: 'USDC',
+    icon: 'https://movricons.s3.ap-south-1.amazonaws.com/Ether.svg',
+  },
+  {
+    id: 2,
+    name: 'USDT',
+    icon: 'https://movricons.s3.ap-south-1.amazonaws.com/Matic.svg',
+  },
+];
+
 const CoinSelect = () => {
   const [isDropDownOpenCoin, setIsDropDownOpenCoin] = useState(false);
+  const [value, setValue] = useState('USDC');
+  const [icon, setIcon] = useState(
+    'https://movricons.s3.ap-south-1.amazonaws.com/Ether.svg'
+  );
 
-  const selectedCoin = () => {
+  const selectedCoin = (coin: any) => {
+    setValue(coin.name);
+    setIcon(coin.icon);
     setIsDropDownOpenCoin(!isDropDownOpenCoin);
   };
 
@@ -19,28 +38,31 @@ const CoinSelect = () => {
             <div className="flex flex-row items-center">
               <img
                 className="mr-2.5 rounded-md object-cover"
-                src="https://movricons.s3.ap-south-1.amazonaws.com/Ether.svg"
+                src={icon}
                 alt="chain_icon"
               />
-              <span className="text-xs leading-6">USDC</span>
+              <span className="text-xs leading-6">{value}</span>
             </div>
           </div>
         </div>
         {isDropDownOpenCoin && (
           <div className="absolute top-12 left-0 z-10 w-full overflow-hidden rounded-b-md bg-tertiaryLight text-black shadow dark:bg-secondaryGray dark:text-white">
-            <div
-              className="flex h-11 w-full cursor-pointer select-none flex-row justify-between bg-tertiaryLight py-2.5 pl-3 pr-2 text-white hover:bg-gray-400 dark:bg-secondaryGray"
-              onClick={() => selectedCoin()}
-            >
-              <div className="flex flex-row items-center">
-                <img
-                  className="mr-2.5 h-6 w-6 rounded-md bg-gray-300 object-cover"
-                  src="https://movricons.s3.ap-south-1.amazonaws.com/Ether.svg"
-                  alt="chain_icon"
-                />
-                <span className="text-sm leading-6">USDC</span>
+            {coins.map((coin) => (
+              <div
+                key={coin.id}
+                className="flex h-11 w-full cursor-pointer select-none flex-row justify-between bg-tertiaryLight py-2.5 pl-3 pr-2 text-white hover:bg-gray-400 dark:bg-secondaryGray"
+                onClick={() => selectedCoin(coin)}
+              >
+                <div className="flex flex-row items-center">
+                  <img
+                    className="mr-2.5 h-6 w-6 rounded-md bg-gray-300 object-cover"
+                    src={coin.icon}
+                    alt="chain_icon"
+                  />
+                  <span className="text-sm leading-6">{coin.name}</span>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         )}
       </div>

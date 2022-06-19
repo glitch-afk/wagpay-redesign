@@ -2,7 +2,7 @@ import React from 'react';
 
 const index = () => {
   return (
-    <nav className="flex items-center justify-between py-4">
+    <nav className="flex items-center justify-between py-4 px-2 lg:px-0">
       <div className="text-xl font-extrabold">WAGPAY</div>
       <div className="flex items-center space-x-4">
         <svg
