@@ -8,7 +8,7 @@ type IMainProps = {
 };
 
 const Main = (props: IMainProps) => (
-  <div className="mx-auto h-fit w-full px-1 antialiased dark:bg-primaryDark dark:text-white md:h-screen">
+  <div className="bg:primaryLight mx-auto h-fit w-full px-1 antialiased dark:bg-primaryDark dark:text-white md:h-screen">
     {props.meta}
 
     <div className="mx-auto max-w-7xl">

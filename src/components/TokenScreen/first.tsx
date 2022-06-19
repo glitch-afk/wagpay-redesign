@@ -3,7 +3,7 @@ import CoinSelect from '../shared/CoinSelect';
 
 const First = () => {
   return (
-    <section className="w-full rounded-lg py-8 px-2 text-center dark:bg-secondaryDark">
+    <section className="w-full rounded-lg bg-secondaryLight py-8 px-2 text-center dark:bg-secondaryDark">
       <h1 className="text-lg font-medium">Select Token</h1>
       <div className="grid justify-items-center md:grid-cols-3">
         {/* section #1 */}
@@ -15,10 +15,10 @@ const First = () => {
         {/* section #2 */}
         <div className="mt-4 flex w-full flex-col items-center justify-center space-y-3 md:mt-0">
           {/* send section */}
-          <div className="col-span-7 mt-4 w-full rounded-md p-3 dark:bg-tertiaryGray sm:mt-7">
+          <div className="col-span-7 mt-4 w-full rounded-md bg-primaryGray p-3 dark:bg-tertiaryGray sm:mt-7">
             <label
               htmlFor="sender"
-              className="mb-2 block text-left text-sm text-white"
+              className="mb-2 block text-left text-sm text-black dark:text-white"
             >
               You Send
             </label>
@@ -27,7 +27,7 @@ const First = () => {
                 <input
                   type="number"
                   placeholder="0.00"
-                  className="block h-12 w-full rounded-l-md border-none bg-quaternaryGray px-3 text-white shadow-sm outline-none focus:border-none focus:outline-none active:outline-none sm:text-sm"
+                  className="block h-12 w-full rounded-l-md border-none bg-tertiaryLight px-3 text-black shadow-sm outline-none focus:border-none focus:outline-none active:outline-none dark:bg-quaternaryGray dark:text-white sm:text-sm"
                 />
                 <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
                   <span className="text-xs text-gray-400">MAX</span>
@@ -54,10 +54,10 @@ const First = () => {
           </svg>
           {/* svg end */}
           {/* receive section */}
-          <div className="col-span-7 mt-4 w-full rounded-md p-2 dark:bg-tertiaryGray sm:mt-7">
+          <div className="col-span-7 mt-4 w-full rounded-md bg-primaryGray p-2 dark:bg-tertiaryGray sm:mt-7">
             <label
               htmlFor="sender"
-              className="mb-2 block text-left text-sm text-white"
+              className="mb-2 block text-left text-sm text-black dark:text-white"
             >
               You Receive
             </label>
@@ -67,7 +67,7 @@ const First = () => {
                   type="number"
                   placeholder="0.00"
                   disabled
-                  className="block h-12 w-full rounded-l-md border-none bg-quaternaryGray px-3 text-white shadow-sm outline-none focus:border-none focus:outline-none active:outline-none sm:text-sm"
+                  className="block h-12 w-full rounded-l-md border-none bg-tertiaryLight px-3 text-black shadow-sm outline-none focus:border-none focus:outline-none active:outline-none dark:bg-quaternaryGray dark:text-white sm:text-sm"
                 />
                 <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
                   <span className="text-xs text-gray-400">MAX</span>

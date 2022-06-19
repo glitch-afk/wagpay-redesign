@@ -4,7 +4,7 @@ import { useState } from 'react';
 const Second = () => {
   const [toggle, setToggle] = useState(true);
   return (
-    <section className="w-full rounded-lg py-8 text-center dark:bg-secondaryDark">
+    <section className="w-full rounded-lg bg-secondaryLight py-8 text-center dark:bg-secondaryDark">
       <div className="grid w-full grid-cols-7 gap-x-6 px-4 md:px-0">
         {/* left side */}
         <div className="col-span-full w-full space-y-4 md:col-span-4">

@@ -15,7 +15,7 @@ const ChainSelect = () => {
     >
       <div
         id="form-select"
-        className="form-select h-11 w-full cursor-pointer rounded-md border-none pl-9 text-sm text-black outline-none dark:bg-tertiaryGray"
+        className="form-select h-11 w-full cursor-pointer rounded-md border-none bg-primaryGray pl-9 text-sm text-black outline-none dark:bg-tertiaryGray dark:text-white"
         placeholder="Search for Chain"
       />
       <button
@@ -34,10 +34,10 @@ const ChainSelect = () => {
       </button>
 
       {isDropDownOpen && (
-        <div className="absolute left-0 z-10 w-full overflow-hidden rounded-b-md bg-gray-700 text-white shadow">
+        <div className="absolute left-0 z-10 w-full overflow-hidden rounded-b-md bg-primaryGray text-black shadow dark:text-white">
           <div
             // key={chain.id}
-            className="flex h-11 w-full cursor-pointer select-none flex-row justify-between py-2.5 pl-3 pr-2 text-white hover:bg-gray-900 dark:bg-secondaryGray"
+            className="flex h-11 w-full cursor-pointer select-none flex-row justify-between bg-primaryGray py-2.5 pl-3 pr-2 hover:bg-gray-400 dark:bg-secondaryGray dark:text-white"
             onClick={() => selectedChain}
           >
             <div className="flex flex-row items-center">

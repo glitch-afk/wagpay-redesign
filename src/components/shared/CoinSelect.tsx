@@ -13,14 +13,12 @@ const CoinSelect = () => {
       <div className="relative w-2/5">
         <div
           className="flex flex-row overflow-hidden rounded-r-md"
-          onClick={() => {
-            setIsDropDownOpenCoin(!isDropDownOpenCoin);
-          }}
+          onClick={() => setIsDropDownOpenCoin(!isDropDownOpenCoin)}
         >
-          <div className="form-select flex h-12 w-full cursor-pointer select-none flex-row justify-between border-none  bg-quaternaryGray px-1 text-white">
+          <div className="form-select flex h-12 w-full cursor-pointer select-none flex-row justify-between border-none bg-tertiaryLight px-1 text-black dark:bg-quaternaryGray dark:text-white">
             <div className="flex flex-row items-center">
               <img
-                className="mr-2.5 rounded-md bg-gray-300 object-cover"
+                className="mr-2.5 rounded-md object-cover"
                 src="https://movricons.s3.ap-south-1.amazonaws.com/Ether.svg"
                 alt="chain_icon"
               />
@@ -29,11 +27,10 @@ const CoinSelect = () => {
           </div>
         </div>
         {isDropDownOpenCoin && (
-          <div className="absolute top-12 left-0 z-10 w-full overflow-hidden rounded-b-md text-white shadow dark:bg-secondaryGray">
+          <div className="absolute top-12 left-0 z-10 w-full overflow-hidden rounded-b-md bg-tertiaryLight text-black shadow dark:bg-secondaryGray dark:text-white">
             <div
-              // key={coin.chainAgnositcId}
-              className="flex h-11 w-full cursor-pointer select-none flex-row justify-between py-2.5 pl-3 pr-2 text-white hover:bg-gray-900 dark:bg-secondaryGray"
-              onClick={() => selectedCoin}
+              className="flex h-11 w-full cursor-pointer select-none flex-row justify-between bg-tertiaryLight py-2.5 pl-3 pr-2 text-white hover:bg-gray-400 dark:bg-secondaryGray"
+              onClick={() => selectedCoin()}
             >
               <div className="flex flex-row items-center">
                 <img
