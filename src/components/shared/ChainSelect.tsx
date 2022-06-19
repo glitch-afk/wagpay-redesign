@@ -32,17 +32,10 @@ const ChainSelect = () => {
     >
       <div
         id="form-select"
-        className="form-select flex h-11 w-full cursor-pointer items-center justify-center rounded-md border-none bg-primaryGray pl-9 text-black outline-none dark:bg-tertiaryGray dark:text-white"
+        className="form-select flex h-11 w-full cursor-pointer items-center rounded-md border-none bg-primaryGray pl-12 text-black outline-none dark:bg-tertiaryGray dark:text-white"
         placeholder="Search for Chain"
       >
-        {value && (
-          <img
-            src={icon}
-            alt="chain"
-            className="ml-3 mr-2 shrink-0 rounded-md fill-current text-gray-400 group-hover:text-gray-500"
-          />
-        )}
-        <span>{value}</span>
+        <span className="text-left">{value}</span>
       </div>
       <button
         className="group absolute inset-0 right-auto"
@@ -50,13 +43,20 @@ const ChainSelect = () => {
         aria-label="Select"
       >
         {value ? (
-          <></>
-        ) : (
           <img
             src={icon}
             alt="chain"
-            className="ml-3 mr-2 shrink-0 fill-current text-gray-400 group-hover:text-gray-500"
+            className="ml-3 mr-2 shrink-0 rounded-md fill-current text-gray-400 group-hover:text-gray-500"
           />
+        ) : (
+          <svg
+            className="ml-3 mr-2 h-4 w-4 shrink-0 fill-current text-gray-400 group-hover:text-gray-500"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M7 14c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zM7 2C4.243 2 2 4.243 2 7s2.243 5 5 5 5-2.243 5-5-2.243-5-5-5z" />
+            <path d="M15.707 14.293L13.314 11.9a8.019 8.019 0 01-1.414 1.414l2.393 2.393a.997.997 0 001.414 0 .999.999 0 000-1.414z" />
+          </svg>
         )}
       </button>
 

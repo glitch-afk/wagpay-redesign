@@ -41,7 +41,7 @@ const Second = () => {
                   <input
                     type="radio"
                     name="radio-buttons"
-                    className="form-radio text-indigo-500"
+                    className="form-radio border border-wagpayPurple bg-transparent text-indigo-500"
                   />
                   <span className="ml-2 text-sm">Gas Fee</span>
                 </label>
@@ -53,7 +53,7 @@ const Second = () => {
                   <input
                     type="radio"
                     name="radio-buttons"
-                    className="form-radio text-indigo-500"
+                    className="form-radio border border-wagpayPurple bg-transparent text-indigo-500"
                   />
                   <span className="ml-2 text-sm">Time</span>
                 </label>

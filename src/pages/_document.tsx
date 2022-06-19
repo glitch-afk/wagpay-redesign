@@ -9,7 +9,7 @@ class MyDocument extends Document {
     return (
       <Html lang={AppConfig.locale}>
         <Head />
-        <body className="dark">
+        <body className="dark no-scrollbar">
           <Main />
           <NextScript />
         </body>

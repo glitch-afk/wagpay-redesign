@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const Button = ({
@@ -14,9 +15,19 @@ const Button = ({
   );
 };
 
-const Third = () => {
+const Third = ({
+  classes,
+  forward,
+  back,
+}: {
+  classes: string;
+  forward: any;
+  back: any;
+}) => {
   return (
-    <section className="w-full rounded-lg bg-secondaryLight py-8 px-2 text-center dark:bg-secondaryDark">
+    <section
+      className={`${classes} w-full rounded-lg bg-secondaryLight px-2 text-center dark:bg-secondaryDark`}
+    >
       <div className="mx-auto flex w-full flex-col items-center justify-between space-y-5 lg:w-10/12 lg:flex-row lg:space-y-0">
         {/* left */}
         <div className="text-center text-sm dark:text-primaryGray lg:w-4/5 lg:text-left">
@@ -26,12 +37,20 @@ const Third = () => {
         </div>
         {/* right */}
         <div className="flex space-x-4">
-          <Button classes={`bg-primaryGray dark:bg-tertiaryGray`}>
-            Cancel
-          </Button>
-          <Button classes={`bg-secondaryGray text-white`}>
-            Select Bridges
-          </Button>
+          <Link href={back.link}>
+            <a>
+              <Button classes={`bg-primaryGray dark:bg-tertiaryGray`}>
+                {back.name}
+              </Button>
+            </a>
+          </Link>
+          <Link href={forward.link}>
+            <a>
+              <Button classes={`bg-secondaryGray text-white`}>
+                {forward.name}
+              </Button>
+            </a>
+          </Link>
         </div>
       </div>
     </section>

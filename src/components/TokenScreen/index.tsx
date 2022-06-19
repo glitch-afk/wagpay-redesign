@@ -10,7 +10,11 @@ const index = () => {
       {/* section 2 */}
       <Second />
       {/* section 3 */}
-      <Third />
+      <Third
+        classes={`py-8`}
+        forward={{ name: 'Select Bridge', link: '/swap/bridges' }}
+        back={{ name: 'Cancel', link: '/' }}
+      />
     </div>
   );
 };
