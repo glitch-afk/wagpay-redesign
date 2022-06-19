@@ -1,3 +1,4 @@
+/* eslint-disable tailwindcss/no-custom-classname */
 import React, { useState } from 'react';
 
 const CoinSelect = () => {
@@ -12,12 +13,11 @@ const CoinSelect = () => {
       <div className="relative w-2/5">
         <div
           className="flex flex-row overflow-hidden rounded-r-md"
-          onClick={(e) => {
-            e.stopPropagation();
+          onClick={() => {
             setIsDropDownOpenCoin(!isDropDownOpenCoin);
           }}
         >
-          <div className="flex h-12 w-full cursor-pointer select-none flex-row justify-between bg-quaternaryGray px-1 text-white">
+          <div className="form-select flex h-12 w-full cursor-pointer select-none flex-row justify-between border-none  bg-quaternaryGray px-1 text-white">
             <div className="flex flex-row items-center">
               <img
                 className="mr-2.5 rounded-md bg-gray-300 object-cover"
@@ -26,16 +26,6 @@ const CoinSelect = () => {
               />
               <span className="text-xs leading-6">USDC</span>
             </div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              className="w-7 transition duration-200 ease-in-out"
-            >
-              <path
-                fill="#D0D0D0"
-                d="M17 9.17a1 1 0 00-1.41 0L12 12.71 8.46 9.17a1 1 0 00-1.41 0 1 1 0 000 1.42l4.24 4.24a1 1 0 001.42 0L17 10.59a1 1 0 000-1.42z"
-              ></path>
-            </svg>
           </div>
         </div>
         {isDropDownOpenCoin && (

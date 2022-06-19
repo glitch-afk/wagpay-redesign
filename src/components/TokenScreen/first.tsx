@@ -1,18 +1,17 @@
+import ChainSelect from '../shared/ChainSelect';
 import CoinSelect from '../shared/CoinSelect';
-import ChainSelect from '../shared/CustomSelect';
 
 const First = () => {
   return (
     <section className="w-full rounded-lg py-8 px-2 text-center dark:bg-secondaryDark">
       <h1 className="text-lg font-medium">Select Token</h1>
-      <div className="grid md:grid-cols-3">
+      <div className="grid justify-items-center md:grid-cols-3">
         {/* section #1 */}
-        <div className="mt-8 flex w-full md:mt-0">
-          <div className="flex w-full flex-col items-center justify-center">
-            <span className="mb-2">Source Chain</span>
-            <ChainSelect />
-          </div>
+        <div className="mt-8 flex w-full flex-col items-center justify-center px-6 md:mt-0">
+          <span className="mb-2">Source Chain</span>
+          <ChainSelect />
         </div>
+
         {/* section #2 */}
         <div className="mt-4 flex w-full flex-col items-center justify-center space-y-3 md:mt-0">
           {/* send section */}
@@ -80,7 +79,7 @@ const First = () => {
           {/* receive section end */}
         </div>
         {/* section #3 */}
-        <div className="mt-6 flex w-full flex-col items-center justify-center md:mt-0">
+        <div className="mt-6 flex w-full flex-col items-center justify-center px-6 md:mt-0">
           <span className="mb-2">Destination Chain</span>
           <ChainSelect />
         </div>

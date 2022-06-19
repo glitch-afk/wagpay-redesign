@@ -1,29 +1,27 @@
+/* eslint-disable tailwindcss/no-custom-classname */
 import React, { useState } from 'react';
 
 const ChainSelect = () => {
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
 
   const selectedChain = () => {
-    // setValue(chain);
-    setIsDropDownOpen(false);
+    setIsDropDownOpen(!isDropDownOpen);
   };
 
   return (
     <div
-      className="relative"
+      className="relative w-full"
       onClick={() => setIsDropDownOpen(!isDropDownOpen)}
     >
-      <input
-        id="form-search"
-        className="w-full rounded-md border-none pl-9 text-sm text-black outline-none dark:bg-tertiaryGray"
-        type="text"
+      <div
+        id="form-select"
+        className="form-select h-11 w-full cursor-pointer rounded-md border-none pl-9 text-sm text-black outline-none dark:bg-tertiaryGray"
         placeholder="Search for Chain"
-        disabled
       />
       <button
         className="group absolute inset-0 right-auto"
-        type="submit"
-        aria-label="Search"
+        type="button"
+        aria-label="Select"
       >
         <svg
           className="ml-3 mr-2 h-4 w-4 shrink-0 fill-current text-gray-400 group-hover:text-gray-500"
@@ -34,6 +32,7 @@ const ChainSelect = () => {
           <path d="M15.707 14.293L13.314 11.9a8.019 8.019 0 01-1.414 1.414l2.393 2.393a.997.997 0 001.414 0 .999.999 0 000-1.414z" />
         </svg>
       </button>
+
       {isDropDownOpen && (
         <div className="absolute left-0 z-10 w-full overflow-hidden rounded-b-md bg-gray-700 text-white shadow">
           <div

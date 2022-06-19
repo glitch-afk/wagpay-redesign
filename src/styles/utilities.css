@@ -1,18 +1,5 @@
-.form-radio {
-    @apply text-sm text-gray-800 bg-white border;
-}
-
-.form-radio {
-    @apply text-indigo-500 border border-gray-300;
-}
-
 .form-radio:focus {
     @apply outline-none;
+    box-shadow: none !important;
 }
 
-.form-radio {
-
-    &:focus {
-        box-shadow: none !important;
-    }
-}
